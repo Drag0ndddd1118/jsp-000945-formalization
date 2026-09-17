@@ -1,0 +1,40 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["facad57c34984227.olean"],
+  "m": false,
+  "i": "d99f3ebdc8972d8e.ilean",
+  "c": "c56abfbddad378f9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/Volumes/Drag0ndddd/JustinSunPrize_Proofs/jsp-000945-formalization/.lake/build/lib/lean /Users/qinzhao/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean /Volumes/Drag0ndddd/JustinSunPrize_Proofs/jsp-000945-formalization/JSP_000945.lean -o /Volumes/Drag0ndddd/JustinSunPrize_Proofs/jsp-000945-formalization/.lake/build/lib/lean/JSP_000945.olean -i /Volumes/Drag0ndddd/JustinSunPrize_Proofs/jsp-000945-formalization/.lake/build/lib/lean/JSP_000945.ilean -c /Volumes/Drag0ndddd/JustinSunPrize_Proofs/jsp-000945-formalization/.lake/build/ir/JSP_000945.c --setup /Volumes/Drag0ndddd/JustinSunPrize_Proofs/jsp-000945-formalization/.lake/build/ir/JSP_000945.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "JSP_000945.lean:171:0: 'JSP000945.jsp_000945_affirmative' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "JSP_000945.lean:172:0: 'JSP000945.jsp_000945_pos_affirmative' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "JSP_000945.lean:173:0: 'JSP000945.jsp_000945_four_witnesses' depends on axioms: [propext, Quot.sound]",
+   "level": "info"}],
+ "inputs":
+ [["deps",
+   [["jsp_000945_formalization/JSP000945:extraDep",
+     [["@jsp_000945_formalization:extraDep", "00000000000006bb"]]],
+    ["imports", "00000000000006bb"]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b",
+   "a1c6c7aa3e9abfe7"],
+  ["/Volumes/Drag0ndddd/JustinSunPrize_Proofs/jsp-000945-formalization/JSP_000945.lean",
+   "aaf46ee7c32b6fe7"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: JSP_000945", "b7cce012fc51e959"],
+  ["Package.id?: (some jsp_000945_formalization)", "0d6af9c5fb8ad3eb"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ee66729bfa02273d"}
