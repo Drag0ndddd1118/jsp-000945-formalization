@@ -55,25 +55,14 @@ are formalized and proven.
 *Axiom status:* Clean (zero custom axioms, zero sorry, kernel-verified in Lean 4 core).
 -/
 
-namespace JSP000945
+import Challenge
 
-/-- Computable primality test on natural numbers. -/
-def isPrime (p : Nat) : Bool :=
-  2 ≤ p && (List.range (p - 2)).all (fun i => p % (i + 2) != 0)
+namespace JSP000945
 
 /-- Square expansion identity in Nat. -/
 theorem sq_eq_mul (k : Nat) : k ^ 2 = k * k := by
   change (1 * k) * k = k * k
   rw [Nat.one_mul]
-
-/-- The property that n is positive and its difference from twice every permitted
-    smaller square (k ≥ 0 with 2 * k^2 < n) is prime. -/
-def DifferencesFromTwiceSquaresArePrime (n : Nat) : Prop :=
-  0 < n ∧ ∀ k : Nat, 2 * k ^ 2 < n → isPrime (n - 2 * k ^ 2) = true
-
-/-- Strict version: considering strictly positive squares k ≥ 1 with 2 * k^2 < n. -/
-def PosDifferencesFromTwiceSquaresArePrime (n : Nat) : Prop :=
-  2 < n ∧ ∀ k : Nat, 0 < k → 2 * k ^ 2 < n → isPrime (n - 2 * k ^ 2) = true
 
 /-! ### Verification of the Witnesses -/
 
@@ -168,8 +157,6 @@ theorem jsp_000945_four_witnesses :
     DifferencesFromTwiceSquaresArePrime 181 :=
   ⟨diffs_prime_5, diffs_prime_13, diffs_prime_31, diffs_prime_181⟩
 
-#print axioms jsp_000945_affirmative
-#print axioms jsp_000945_pos_affirmative
-#print axioms jsp_000945_four_witnesses
-
 end JSP000945
+
+#print axioms JSP000945.jsp_000945_four_witnesses
